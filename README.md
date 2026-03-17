@@ -87,7 +87,7 @@ Each file is in **JSONL format**, where each line represents one document:
   ]
 }
 
-### 2.4 Corpus Statistics (Summary)
+``` ### 2.4 Corpus Statistics (Summary)
 
 | Split                | Documents | Sentences | Tokens | Avg Tokens/Doc |
 |---------------------|-----------|-----------|--------|----------------|
