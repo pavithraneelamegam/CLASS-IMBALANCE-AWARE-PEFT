@@ -38,12 +38,20 @@ We use a **legal rhetorical role classification dataset** consisting of annotate
 
 ---
 
-### ⚠️ Data Availability
+## ⚠️ Data Availability
+
+We use the publicly available **Legal Rhetorical Role dataset**.
+
+🔗 Official dataset link:  
+https://legal-nlp-ekstep.github.io/Competitions/Rhetorical-Role/
 
 Due to licensing restrictions:
 
-- ❌ The dataset is not included in this repository  
-- ✅ Users are required to place the dataset manually  
+- ❌ The dataset is not redistributed in this repository  
+- ✅ Users must download it from the official source  
+
+After downloading, place the files in:
+
 
 Expected directory structure:
 
