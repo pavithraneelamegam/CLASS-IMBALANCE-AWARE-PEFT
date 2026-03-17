@@ -68,7 +68,7 @@ build_jsonl/
 
 ###  2.3 File Paths Used in Code
 
-```python
+
 TRAIN_PATH = "build_jsonl/build_train.jsonl"
 DEV_PATH   = "build_jsonl/build_dev.jsonl"
 TEST_PATH  = "build_jsonl/build_test.jsonl"
@@ -79,7 +79,7 @@ TEST_PATH  = "build_jsonl/build_test.jsonl"
 
 Each file is in **JSONL format**, where each line represents one document:
 
-```json
+
 {
   "id": "doc_0",
   "sentences": [
@@ -145,13 +145,13 @@ We use **12 rhetorical roles + 1 NONE label**:
 
 ### 4.1 Clone Repository
 
-```bash
+
 git clone https://github.com/pavithraneelamegam/CLASS-IMBALANCE-AWARE-PEFT.git
 cd CLASS-IMBALANCE-AWARE-PEFT
 
 ### 4.2 Install Dependencies
 
-```bash
+
 pip install torch transformers peft datasets scikit-learn pandas numpy matplotlib seaborn bitsandbytes
 
 
