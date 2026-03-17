@@ -197,10 +197,15 @@ We report:
 - Minority Macro-F1 *(important for imbalance evaluation)*
 
 ---
+## 7. Reproducibility
 
+- Fixed random seeds are used in all experiments  
+- Ensure the same dataset splits are used  
+- Results are reproducible within minor variance  
+- GPU is recommended for efficient training  
 ---
 
-##  7. Acknowledgement
+##  8. Acknowledgement
 
 We gratefully acknowledge the contributions of:
 
