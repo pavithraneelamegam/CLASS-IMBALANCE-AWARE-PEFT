@@ -186,3 +186,21 @@ Run the following notebooks:
 - `MISTRAL 7B-Fewshot.ipynb`
 - `QWEN - Fewshot.ipynb`
 - `QWEN- SFT.ipynb`
+
+##  6. Evaluation Metrics
+
+We report:
+
+- Accuracy  
+- Macro-F1  
+- Weighted-F1  
+- Minority Macro-F1 *(important for imbalance evaluation)*
+
+---
+
+## 7. Acknowledgement
+
+We thank:
+
+**Bhattacharya et al. (2019, 2021)**  
+for introducing rhetorical role annotations for legal documents.
