@@ -51,18 +51,41 @@ Due to licensing restrictions:
 - ✅ Users must download it from the official source  
 
 After downloading, place the files in:
+build_jsonl/
+├── build_train.jsonl # Training set
+├── build_dev.jsonl # Validation set
+└── build_test.jsonl # Test set
 
-
-Expected directory structure:
 
 ---
+
+### 📌 File Paths Used in Code
+
+```python
+TRAIN_PATH = "build_jsonl/build_train.jsonl"
+DEV_PATH   = "build_jsonl/build_dev.jsonl"
+TEST_PATH  = "build_jsonl/build_test.jsonl"
 
 ### 📄 Expected Format
 
-Each file should follow:
+Each file is in **JSONL format**, where each line represents one document:
 
-
----
+```json
+{
+  "id": "doc_0",
+  "sentences": [
+    "PETITIONER: THE COMMISSIONER OF INCOME-TAX...",
+    "DATE OF JUDGMENT: 05/05/1961...",
+    "It entered into transactions...",
+    "The assessee claimed deduction..."
+  ],
+  "labels": [
+    "PREAMBLE",
+    "PREAMBLE",
+    "FACTS",
+    "FACTS"
+  ]
+}
 
 ## 📊 Corpus Statistics (Summary)
 
@@ -85,66 +108,21 @@ To enable structured understanding, documents are segmented into **Rhetorical Ro
 
 ## 🏷️ Label Set (Rhetorical Roles)
 
-We use **12 rhetorical roles + 1 NONE label**, refined from prior work with domain expert validation.
+We use **12 rhetorical roles + 1 NONE label**:
 
-### 🔹 Core Labels
-
-- **PREAMBLE**  
-  Metadata such as court name, parties, judges, and headnotes.
-
-- **FAC (Facts)**  
-  Chronology of events leading to the case, including FIR, proceedings, and background.
-
-- **RLC (Ruling by Lower Court)**  
-  Decisions, reasoning, and judgments from lower courts.
-
-- **ISSUE**  
-  Legal questions framed by the court.
-
----
-
-### 🔹 Arguments
-
-- **ARG_PETITIONER**  
-  Arguments made by petitioner’s lawyers.
-
-- **ARG_RESPONDENT**  
-  Arguments made by respondent’s lawyers.
-
----
-
-### 🔹 Court Analysis
-
-- **ANALYSIS**  
-  Court’s reasoning, interpretation of facts, laws, and prior cases.
-
-- **STA (Statute)**  
-  References to laws, acts, sections, or legal provisions.
-
-- **PRE_RELIED**  
-  Precedent cases relied upon by the court.
-
-- **PRE_NOT_RELIED**  
-  Precedents discussed but not used in final reasoning.
-
----
-
-### 🔹 Decision
-
-- **RATIO**  
-  Core reasoning behind the decision.
-
-- **RPC (Ruling by Present Court)**  
-  Final judgment, conclusion, and court order.
-
----
-
-### 🔹 Other
-
-- **NONE**  
-  Sentences that do not belong to any defined category.
-
----
+- **PREAMBLE** – Metadata (court, parties, judges, headnotes)
+- **FAC** – Facts and case background chronology
+- **RLC** – Ruling and reasoning by lower courts
+- **ISSUE** – Legal questions framed by the court
+- **ARG_PETITIONER** – Arguments by petitioner
+- **ARG_RESPONDENT** – Arguments by respondent
+- **ANALYSIS** – Court’s reasoning and discussion
+- **STA** – Statutes, acts, and legal provisions
+- **PRE_RELIED** – Precedents relied upon
+- **PRE_NOT_RELIED** – Precedents not relied upon
+- **RATIO** – Core reasoning behind the decision
+- **RPC** – Final ruling by present court
+- **NONE** – Sentences not belonging to any category
 
 ## 🎯 Key Characteristics
 
