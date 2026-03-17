@@ -60,13 +60,13 @@ build_jsonl/
 ---
 
 ### 2.2 File Paths Used in Code
-
+``` jsonl
 
 TRAIN_PATH = "build_jsonl/build_train.jsonl"
 DEV_PATH   = "build_jsonl/build_dev.jsonl"
 TEST_PATH  = "build_jsonl/build_test.jsonl"
 
-### 2.3 Expected Format
+### 2.3 Expected Format 
 
 Each file is in **JSONL format**, where each line represents one document:
 
