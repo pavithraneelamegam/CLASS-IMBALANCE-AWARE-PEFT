@@ -53,8 +53,8 @@ We use the publicly available **Legal Rhetorical Role dataset**:
 
 🔗 https://legal-nlp-ekstep.github.io/Competitions/Rhetorical-Role/
 
-- ❌ Dataset is not redistributed in this repository  
-- ✅ Users must download it from the official source  
+-  Dataset is not redistributed in this repository  
+-  Users must download it from the official source  
 
 ---
 
