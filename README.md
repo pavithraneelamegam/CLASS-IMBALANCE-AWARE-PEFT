@@ -1,15 +1,15 @@
 # **Imbalance-Aware Parameter-Efficient Fine-Tuning for Legal Rhetorical Role Classification**
-## 📌 Overview
+## 1.Overview
 
 This repository contains the implementation of our proposed **imbalance-aware parameter-efficient fine-tuning (PEFT)** methods for **legal rhetorical role classification**:
 
-### 🔹 Proposed Methods
+### 1.1 Proposed Methods
 - **RC-LoRA + UGR** *(Role-Constrained LoRA with Uncertainty-Guided Reweighting)*
 - **DLR-PEFT** *(Dynamic Low-Rank Parameter-Efficient Fine-Tuning)*
 
 ---
 
-### 🔹 Baselines
+### 1.2 Baselines
 
 We benchmark our methods against:
 
@@ -29,16 +29,16 @@ We benchmark our methods against:
 
 ---
 
-### 🚀 Key Insight
+### 1.3 Key Insight
 
 Our proposed methods significantly improve **minority class performance** while maintaining strong overall accuracy, making them highly effective for **imbalanced legal NLP tasks**.
-## 📦 Dataset
+## 2 Dataset
 
 We use a **legal rhetorical role classification dataset** consisting of annotated sentences from legal case documents.
 
 ---
 
-## ⚠️ Data Availability
+### 2.1 Data Availability
 
 We use the publicly available **Legal Rhetorical Role dataset**.
 
@@ -59,14 +59,14 @@ build_jsonl/
 
 ---
 
-### 📌 File Paths Used in Code
+### 2.2 File Paths Used in Code
 
 ```python
 TRAIN_PATH = "build_jsonl/build_train.jsonl"
 DEV_PATH   = "build_jsonl/build_dev.jsonl"
 TEST_PATH  = "build_jsonl/build_test.jsonl"
 
-### 📄 Expected Format
+### 2.3 Expected Format
 
 Each file is in **JSONL format**, where each line represents one document:
 
@@ -87,7 +87,7 @@ Each file is in **JSONL format**, where each line represents one document:
   ]
 }
 
-## 📊 Corpus Statistics (Summary)
+### 2.4 Corpus Statistics (Summary)
 
 | Split                | Documents | Sentences | Tokens | Avg Tokens/Doc |
 |---------------------|-----------|-----------|--------|----------------|
@@ -97,14 +97,14 @@ Each file is in **JSONL format**, where each line represents one document:
 | Test (Out-domain)   | 27        | 4,292     | 127K   | 4,722          |
 | **Total**           | **354**   | **40,315**| **1.3M** | **3,638**     |
 
-## 🧠 Task Definition
+## 3. Task Definition
 
 Legal documents are long and complex, with information distributed across sections.  
 To enable structured understanding, documents are segmented into **Rhetorical Roles (RRs)** — semantically coherent units representing different functional parts of a legal judgment.
 
 ---
 
-## 🏷️ Label Set (Rhetorical Roles)
+### 3.1 Label Set (Rhetorical Roles)
 
 We use **12 rhetorical roles + 1 NONE label**:
 
@@ -122,7 +122,7 @@ We use **12 rhetorical roles + 1 NONE label**:
 - **RPC** – Final ruling by present court
 - **NONE** – Sentences not belonging to any category
 
-## 🎯 Key Characteristics
+### 3.2 Key Characteristics
 
 - Long documents (avg ~3600 tokens per document)
 - Highly **imbalanced label distribution**
