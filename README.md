@@ -198,9 +198,16 @@ We report:
 
 ---
 
-## 7. Acknowledgement
+---
 
-We thank:
+##  7. Acknowledgement
 
-**Bhattacharya et al. (2019, 2021)**  
-for introducing rhetorical role annotations for legal documents.
+We gratefully acknowledge the contributions of:
+
+- **Bhattacharya et al. (2019, 2021)**  
+  for introducing rhetorical role annotations in legal documents.
+
+- **Kalamkar et al. (2022)**  
+  for creating the *Build Corpus for Automatic Structuring of Legal Documents*, which forms the basis of our dataset.
+
+We thank the authors for making these resources publicly available to support research in legal NLP.
