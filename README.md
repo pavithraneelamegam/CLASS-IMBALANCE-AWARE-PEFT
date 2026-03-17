@@ -1,8 +1,8 @@
-# ⚖️ **Imbalance-Aware Parameter-Efficient Fine-Tuning for Legal Rhetorical Role Classification**
+#  **Imbalance-Aware Parameter-Efficient Fine-Tuning for Legal Rhetorical Role Classification**
 
 ---
 
-## 📌 1. Overview
+##  1. Overview
 
 This repository contains the implementation of our proposed **imbalance-aware parameter-efficient fine-tuning (PEFT)** methods for **legal rhetorical role classification**.
 
@@ -35,19 +35,19 @@ We benchmark our methods against:
 
 ---
 
-### 🚀 1.3 Key Insight
+###  1.3 Key Insight
 
 Our proposed methods significantly improve **minority class performance** while maintaining strong overall accuracy, making them highly effective for **imbalanced legal NLP tasks**.
 
 ---
 
-# 📦 2. Dataset
+#  2. Dataset
 
 We use a **legal rhetorical role classification dataset** consisting of annotated sentences from legal case documents.
 
 ---
 
-### ⚠️ 2.1 Data Availability
+###  2.1 Data Availability
 
 We use the publicly available **Legal Rhetorical Role dataset**:
 
@@ -58,7 +58,7 @@ We use the publicly available **Legal Rhetorical Role dataset**:
 
 ---
 
-### 📁 2.2 Dataset Directory Structure
+###  2.2 Dataset Directory Structure
 build_jsonl/
 ├── build_train.jsonl # Training set
 ├── build_dev.jsonl # Validation set
@@ -66,7 +66,7 @@ build_jsonl/
 
 ---
 
-### 📌 2.3 File Paths Used in Code
+###  2.3 File Paths Used in Code
 
 ```python
 TRAIN_PATH = "build_jsonl/build_train.jsonl"
@@ -96,7 +96,7 @@ Each file is in **JSONL format**, where each line represents one document:
   ]
 }
 
-### 📊 2.5 Corpus Statistics (Summary)
+###  2.5 Corpus Statistics (Summary)
 
 | Split              | Documents | Sentences | Tokens | Avg Tokens/Doc |
 |--------------------|----------|-----------|--------|----------------|
@@ -106,14 +106,14 @@ Each file is in **JSONL format**, where each line represents one document:
 | Test (Out-domain)  | 27       | 4,292     | 127K   | 4,722          |
 | **Total**          | **354**  | **40,315**| **1.3M** | **3,638**     |
 
-## 🧠 3. Task Definition
+##  3. Task Definition
 
 Legal documents are long and complex, with information distributed across sections.  
 To enable structured understanding, documents are segmented into **Rhetorical Roles (RRs)** — *semantically coherent units representing different functional parts of a legal judgment.*
 
 ---
 
-### 🏷️ 3.1 Label Set (Rhetorical Roles)
+###  3.1 Label Set (Rhetorical Roles)
 
 We use **12 rhetorical roles + 1 NONE label**:
 
@@ -133,8 +133,56 @@ We use **12 rhetorical roles + 1 NONE label**:
 
 ---
 
-### 🔍 3.2 Key Characteristics
+###  3.2 Key Characteristics
 
-- 📄 Long documents (~3600 tokens per document)
-- ⚖️ Highly **imbalanced label distribution**
-- 🧠 Requires **context-aware modeling**
+-  Long documents (~3600 tokens per document)
+-  Highly **imbalanced label distribution**
+-  Requires **context-aware modeling**
+
+---
+
+##  4. Installation
+
+### 4.1 Clone Repository
+
+```bash
+git clone https://github.com/pavithraneelamegam/CLASS-IMBALANCE-AWARE-PEFT.git
+cd CLASS-IMBALANCE-AWARE-PEFT
+
+### 4.2 Install Dependencies
+
+```bash
+pip install torch transformers peft datasets scikit-learn pandas numpy matplotlib seaborn bitsandbytes
+
+
+
+
+
+
+##  5. How to Run
+
+### 5.1 Baseline Models
+
+Run the following notebooks:
+
+- `BASELINE-INLEGALBERT-HSLN.ipynb`
+- `BASELINE+LORA.ipynb`
+- `BASELINE+QLORA.ipynb`
+- `BASELINE+ADALORA.ipynb`
+- `BASELINE+SUPERLORA.ipynb`
+- `BASELINE+PROMPT TUNING.ipynb`
+
+---
+
+### 5.2 Proposed Methods
+
+- `RC-LORA+UGR.ipynb`
+- `DLR-PEFT.ipynb`
+
+---
+
+### 5.3 LLM-Based Methods
+
+- `MISTRAL 7B-Fewshot.ipynb`
+- `QWEN - Fewshot.ipynb`
+- `QWEN- SFT.ipynb`
