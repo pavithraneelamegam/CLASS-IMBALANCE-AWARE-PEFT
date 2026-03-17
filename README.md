@@ -89,15 +89,13 @@ Each file is in **JSONL format**, where each line represents one document:
 
 ## 📊 Corpus Statistics (Summary)
 
-| Split | Documents | Sentences | Tokens | Avg Tokens/Doc |
-|------|----------|----------|--------|----------------|
-| Train | 247 | 28,986 | 938K | 3797 |
-| Validation | 30 | 2,879 | 88K | 2947 |
-| Test (In-domain) | 50 | 4,158 | 134K | 2681 |
-| Test (Out-domain) | 27 | 4,292 | 127K | 4722 |
-| **Total** | **354** | **40,315** | **1.3M** | **3638** |
-
----
+| Split                | Documents | Sentences | Tokens | Avg Tokens/Doc |
+|---------------------|-----------|-----------|--------|----------------|
+| Train               | 247       | 28,986    | 938K   | 3,797          |
+| Validation          | 30        | 2,879     | 88K    | 2,947          |
+| Test (In-domain)    | 50        | 4,158     | 134K   | 2,681          |
+| Test (Out-domain)   | 27        | 4,292     | 127K   | 4,722          |
+| **Total**           | **354**   | **40,315**| **1.3M** | **3,638**     |
 
 ## 🧠 Task Definition
 
